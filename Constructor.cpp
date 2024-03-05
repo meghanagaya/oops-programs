@@ -20,13 +20,13 @@ cout<<"SemPercentage : "<<semPerentage<<endl;
 };
 int main()
 {
-Student venkat;
+Student meghana;
 string name;
 float val;
 cout<<"Enter your name : ";
 getline(cin,name);
 cout<<"Enter your sem percentage : ";
 cin>>val;
-Student venkat01(name,val);
+Student meghana01(name,val);
 return 0;
 }
