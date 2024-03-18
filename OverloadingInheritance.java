@@ -1,25 +1,44 @@
-class Mul2int
+class Student
 {
-    int multiply(int a,int b)
+    String FullName;
+    int RollNumber;
+    double Cgpa;
+    String Department;
+    void getdata(String name,int roll,double cgpa,String dep)
     {
-        return a*b;
+        FullName=name;
+        RollNumber=roll;
+        Cgpa=cgpa;
+        Department=dep;
     }
 }
-
-class Mul3int extends Mul2int
-{
-    int multiply(int a,int b,int c)
+class Student1 extends Student{
+    String Section;
+    void getdata(String name,int roll,double cgpa,String dep,String sec)
     {
-        return a*b*c;
+        FullName=name;
+        RollNumber=roll;
+        Cgpa=cgpa;
+        Department=dep;
+        Section=sec;
+    }
+    void display()
+    {
+        System.out.println("Student Details\n");
+        System.out.println("Name: "+FullName);
+        System.out.println("Roll Number: "+RollNumber);
+        System.out.println("Cgpa: "+Cgpa);
+        System.out.println("Department: "+Department);
+        System.out.println("Section: "+Section);
     }
 }
-
-public class OverloadingInheritance 
-{
-    public static void main(String[] args) 
-    {
-        Mul3int obj=new Mul3int();
-        System.out.println("The product of two numbers : "+obj.multiply(8,3));
-        System.out.println("The product of three numbers : "+obj.multiply(8, 4, 8));
+public class methodoverloadinheri{
+    public static void main(String[] args){
+        Student1 s1 = new Student1();
+        s1.getdata("Meghana",08,7.5,"CSE");
+        s1.display();
+        Student1 s2 = new Student1();
+        s2.getdata("Meghana",08,7.5,"CSE","A");
+        s2.display();
     }
 }
